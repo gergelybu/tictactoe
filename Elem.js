@@ -3,11 +3,16 @@ class Elem {
   constructor(szuloElem) {
     /*adattagok beállítás*/
     this.szuloElem = szuloElem;
+    this.allapot = true;
     this.#htmlOsszeallit(); /*this - konkrét osztály példányra mutat*/
     this.divElem = this.szuloElem.children("div:last-child");
     this.pElem = this.divElem.children("p");
     this.divElem.on("click", () => {
-      this.#esemenyTrigger("elemKivalaszt");
+      if (this.allapot == true) {
+        this.#esemenyTrigger("elemKivalaszt");
+        this.allapot = false;
+      }
+
       //this.setErtek("X");
     });
   }
