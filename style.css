@@ -1,0 +1,17 @@
+.elem{
+    text-align: center;
+    font-size: 50px;
+    border: 1px solid black;
+}
+
+.elem p{
+    padding: auto;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.jatekter{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
